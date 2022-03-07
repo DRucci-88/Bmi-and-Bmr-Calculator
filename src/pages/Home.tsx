@@ -1,22 +1,21 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import { IonButton, IonContent, IonGrid, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import React from "react";
 
-const Home: React.FC = () => {
-  return (
+const Home = () => {
+  return(
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>Calculator</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+
+      <IonContent>
+        <IonGrid className="ion-padding">
+          <h1>Remacth Brother</h1>
+          <IonButton routerLink="/bmi" expand="block">BMI Calculator</IonButton>
+          <IonButton routerLink="/bmr" expand="block">BMR  Calculator</IonButton>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );
